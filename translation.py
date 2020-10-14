@@ -1,7 +1,7 @@
 class Translation(object):
       START = """Hi **{}**,
 
-I am a telegram file to permanent link generator bot.
+I can delete Messages forwarded from Channels to discussion group.
 
 **Maintained By:** [Anonymous](https://t.me/Ns_AnoNymouS)
 """
