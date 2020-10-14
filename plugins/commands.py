@@ -38,7 +38,7 @@ async def help(c, m):
 
 @Client.on_message(Filters.command(["start"]) & Filters.private)
 async def start(c, m):
-      button = [[InlineKeyboardButton("Creator 👨🏻‍💻", url="https://t.me/Ns_AnoNymouS"), InlineKeyboardButton("Add To channel 🔰", url="http://t.me/{}?startgroup=False".format(m.chat.username))], [InlineKeyboardButton("🤔 Help", callback_data="help"), InlineKeyboardButton("🤖 About", callback_data="about")]]
+      button = [[InlineKeyboardButton("Creator 👨🏻‍💻", url="https://t.me/Ns_AnoNymouS"), InlineKeyboardButton("Add To channel 🔰", url="http://t.me/{}?startgroup=False".format(c.chat.username))], [InlineKeyboardButton("🤔 Help", callback_data="help"), InlineKeyboardButton("🤖 About", callback_data="about")]]
       reply_markup = InlineKeyboardMarkup(button)
       await m.reply_text(text=Translation.START.format(m.from_user.first_name),
                          reply_to_message_id=m.message_id,
