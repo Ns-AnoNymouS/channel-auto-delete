@@ -5,3 +5,4 @@ from pyrogram import Client, Filters
 async def delete(c, m):
     if m.from_user is None:
        await m.delete()
+    c.continue_propagation()
