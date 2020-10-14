@@ -1,5 +1,6 @@
 import pyrogram
 from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 from translation import Translation 
 
 @Client.on_message(Filters.text & Filters.private & Filters.incoming)
