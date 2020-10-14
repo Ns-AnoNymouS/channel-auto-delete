@@ -1,13 +1,13 @@
 class Translation(object):
       START = """Hi **{}**,
 
-I can delete Messages forwarded from Channels to discussion group.
+I can delete Messages forwarded from Channels to discussion group.See help to know how to use
 
 **Maintained By:** [Anonymous](https://t.me/Ns_AnoNymouS)
 """
       ABOUT = """**MY DETAILS:**
 
-```🤖My Name:``` [Converter Ns bot](https://t.me/convert_Ns_bot)
+```🤖My Name:``` [Channel Forward Delete 🗑](https://t.me/Postdeleter_NsBot)
     
 ```📝 Language:``` [Python 3](https://www.python.org/)
 
@@ -27,9 +27,9 @@ I can delete Messages forwarded from Channels to discussion group.
 No problem follow the steps__**
 
 
-1. Send the Media for which you need the permanent link.
+1. Add me to your discussion group and make me admin with delete permission.
 
-2. That's it. Bot will send you the Download link.
+2. I will delete messages forwarded from linked channel.
 
 If you have any Suggestions tell us in @Ns_Bot_supporters.
 """
