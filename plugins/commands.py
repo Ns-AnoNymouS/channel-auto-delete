@@ -29,7 +29,7 @@ async def about(c, m):
 
 @Client.on_message(Filters.command(["help"]) & Filters.private)
 async def help(c, m):
-      button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤖 About", callback_data="about")], [InlineKeyboardButton("Add To Group", url="https://t.me/Postdeleter_NsBot?startgroup=False")]]
+      button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤖 About", callback_data="about")], [InlineKeyboardButton("Add To Group 🔰", url="https://t.me/Postdeleter_NsBot?startgroup=False")]]
       reply_markup = InlineKeyboardMarkup(button)
       await m.reply_text(text=Translation.HELP,
                          reply_to_message_id=m.message_id,
