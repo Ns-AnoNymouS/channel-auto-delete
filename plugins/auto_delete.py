@@ -8,6 +8,7 @@ from pyrogram import Client, Filters
 @Client.on_message(Filters.linked_channel)
 async def delete(c, m):
     bot = await c.get_me()
-    bot_details = await m.chat.get_member(bot.id)
-    print(bot_details)
+    bot_permissions = await m.chat.get_member(bot.id)
+    if not bot_permissions.can_delete_messages:
+        return await m.reply_text("I don't have sufficient rights to delete the files, So please give me right to delete")
     await m.delete()
