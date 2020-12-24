@@ -21,5 +21,4 @@ if __name__ == "__main__":
         api_hash=Config.API_HASH,
         plugins=plugins
     )
-    Config.BOT = postdelete.get_me()
     postdelete.run()
