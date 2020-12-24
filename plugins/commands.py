@@ -1,4 +1,4 @@
-import pyrogram
+from config import Config
 from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 from translation import Translation 
