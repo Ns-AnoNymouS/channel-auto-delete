@@ -42,7 +42,7 @@ async def start(c, m):
                          reply_to_message_id=m.message_id,
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
-@Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
+@Client.on_message(Filters.command(f"start@{Config.BOT}") & Filters.group)
 async def st(c, m):
     bot = await c.get_me()
     bot_permissions = await m.chat.get_member(bot.id)
