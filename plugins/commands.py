@@ -44,6 +44,14 @@ async def start(c, m):
                          disable_web_page_preview=True)
 @Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
 async def st(c, m):
-      await m.reply_text(text="Now add me as admin with delete permission",
-                         reply_to_message_id=m.message_id,
-                         disable_web_page_preview=True)
+    bot = await c.get_me()
+    bot_permissions = await m.chat.get_member(bot.id)
+    if not bot_permissions.can_delete_messages:
+        await m.reply_text(
+            text="Now give me the delete permission 🗑",
+            quote=True
+        )
+    else:
+        await m.reply_text(
+            text="Yeah i am alive 🤩"
+        )
