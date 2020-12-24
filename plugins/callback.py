@@ -1,5 +1,5 @@
 import pyrogram
-from pyrogram import Client, filters
+from pyrogram import Client, filters as Filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from translation import Translation
 
