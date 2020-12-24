@@ -14,11 +14,12 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 if __name__ == "__main__" :
     plugins = dict(root="plugins")
-    app = Client(
+    postdelete = Client(
         "POSTDelete",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
     )
-    app.run()
+    Config.BOT = postdelete.get_me()
+    postdelete.run()
