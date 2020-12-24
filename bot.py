@@ -12,7 +12,7 @@ from pyrogram import Client
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
     plugins = dict(root="plugins")
     postdelete = Client(
         "POSTDelete",
