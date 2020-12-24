@@ -1,4 +1,3 @@
-from config import Config
 from pyrogram import Client, filters as Filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
@@ -45,7 +44,7 @@ async def start(c, m):
                          disable_web_page_preview=True)
 @Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
 async def start_group(c, m):
-    bot = Config.BOT
+    bot = await c.get_me()
     bot_permissions = await m.chat.get_member(bot.id)
     if not bot_permissions.can_delete_messages:
         await m.reply_text(
