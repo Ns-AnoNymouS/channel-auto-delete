@@ -10,15 +10,13 @@ async def force(c, m):
         if chat.status=="kicked":
            await c.send_message(chat_id=m.chat.id, text="You are Banned 😝", reply_to_message_id=m.message_id)
            m.stop_propagation()
-      except UserBannedInChannel:
-         return await c.send_message(chat_id=m.chat.id, text="Hai you made a mistake so you are banned from channel so you are banned from me too 😜")
       except UserNotParticipant:
           button = [[InlineKeyboardButton('join Updates channel 🥰', url='https://t.me/Ns_bot_updates')]]
           markup = InlineKeyboardMarkup(button)
           return await c.send_message(chat_id=m.chat.id, text="""Hai bro,\n\n**You must join my channel for using me.**\n\nPress this button to join now 👇""", parse_mode='markdown', reply_markup=markup)
       m.continue_propagation()
 
-@Client.on_message(Filters.command(["about"]) & Filters.private)
+@Client.on_message(Filters.command("about") & Filters.private)
 async def about(c, m):
       button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤔 Help", callback_data="help")]]
       reply_markup = InlineKeyboardMarkup(button)
@@ -27,7 +25,7 @@ async def about(c, m):
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
 
-@Client.on_message(Filters.command(["help"]) & Filters.private)
+@Client.on_message(Filters.command("help") & Filters.private)
 async def help(c, m):
       button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤖 About", callback_data="about")], [InlineKeyboardButton("Add Me To Group 🔰", url="https://t.me/Postdeleter_NsBot?startgroup=False")]]
       reply_markup = InlineKeyboardMarkup(button)
@@ -36,7 +34,7 @@ async def help(c, m):
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
 
-@Client.on_message(Filters.command(["start"]) & Filters.private)
+@Client.on_message(Filters.command("start") & Filters.private)
 async def start(c, m):
       button = [[InlineKeyboardButton("Creator 👨🏻‍💻", url="https://t.me/Ns_AnoNymouS"), InlineKeyboardButton("Add Me To Group 🔰", url="http://t.me/Postdeleter_NsBot?startgroup=False")], [InlineKeyboardButton("🤔 Help", callback_data="help"), InlineKeyboardButton("🤖 About", callback_data="about")]]
       reply_markup = InlineKeyboardMarkup(button)
@@ -44,7 +42,7 @@ async def start(c, m):
                          reply_to_message_id=m.message_id,
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
-@Client.on_message(Filters.command(["start@Postdeleter_NsBot"]) & ~Filters.private)
+@Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
 async def st(c, m):
       await m.reply_text(text="Now add me as admin with delete permission",
                          reply_to_message_id=m.message_id,
