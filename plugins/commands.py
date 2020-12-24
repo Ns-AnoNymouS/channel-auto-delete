@@ -43,8 +43,8 @@ async def start(c, m):
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
 @Client.on_message(Filters.command(f"start@{Config.BOT}") & Filters.group)
-async def st(c, m):
-    bot = await c.get_me()
+async def start_group(c, m):
+    bot = Config.BOT
     bot_permissions = await m.chat.get_member(bot.id)
     if not bot_permissions.can_delete_messages:
         await m.reply_text(
