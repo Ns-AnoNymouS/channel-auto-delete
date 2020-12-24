@@ -1,9 +1,9 @@
-import pyrogram
-
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+import logging.config
+
+# Get logging configurations
+logging.getLogger().setLevel(logging.ERROR)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 import os
 
@@ -13,11 +13,9 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 if __name__ == "__main__" :
-    plugins = dict(
-        root="plugins"
-    )
+    plugins = dict(root="plugins")
     app = Client(
-        "Linktofile",
+        "POSTDelete",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
