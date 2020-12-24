@@ -8,5 +8,6 @@ from pyrogram import Client, Filters
 @Client.on_message(Filters.linked_channel)
 async def delete(c, m):
     bot = await c.get_me()
-    await m.chat.get_member(get_member)
+    bot_details = await m.chat.get_member(bot.id)
+    print(bot_details)
     await m.delete()
