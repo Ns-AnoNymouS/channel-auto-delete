@@ -1,5 +1,6 @@
 import pyrogram
-from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from translation import Translation
 
 @Client.on_callback_query(Filters.create(lambda _, query: query.data.startswith('about')))          
