@@ -36,7 +36,7 @@ async def start(c, m):
                          disable_web_page_preview=True)
 
 
-@Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
+@Client.on_message(Filters.command(f"start{config.BOT_USERNAME}") & Filters.group)
 async def start_group(c, m):
     bot = await c.get_me()
     bot_permissions = await m.chat.get_member(bot.id)
