@@ -13,7 +13,7 @@ async def about_cb(c, m):
 
 @Client.on_callback_query(Filters.regex('^help$'))         
 async def help_cb(c, m):
-      button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤖 About", callback_data="about")], [InlineKeyboardButton("Add Me To Group 🔰", url="https://t.me/Postdeleter_NsBot?startgroup=False")]]
+      button = [[InlineKeyboardButton("⛔ Close", callback_data="close"), InlineKeyboardButton("🤖 About", callback_data="about")], [InlineKeyboardButton("Add Me To Group 🔰", url=f"https://t.me/{c.username}?startgroup=False")]]
       reply_markup = InlineKeyboardMarkup(button)
       await m.message.edit(text=Translation.HELP,
                          reply_markup=reply_markup,
