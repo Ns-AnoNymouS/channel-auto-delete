@@ -1,14 +1,14 @@
 {
-  "name": "File to Link",
-  "description": "Telegram File to Link. Create your Fork now.",
+  "name": "Channel Auto Delete",
+  "description": "Telegram Bot to delete the messages forwarded from channel to group automatically. Create your Fork now.",
   "keywords": [
     "telegram",
     "best"
   ],
   "logo": "https://telegra.ph/file/bad1ab8ce5f44868e1a7e.jpg",
   "success_url": "https://telegram.dog/Postdeleter_NsBot",
-  "website": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
-  "repository": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
+  "website": "https://github.com/Ns-AnoNymouS/channel-auto-delete",
+  "repository": "https://github.com/Ns-AnoNymouS/channel-auto-delete",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
