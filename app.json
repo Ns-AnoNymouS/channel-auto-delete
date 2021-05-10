@@ -5,8 +5,8 @@
     "telegram",
     "best"
   ],
-  "logo": "https://telegra.ph/file/7f3b556164324610e21a6.jpg",
-  "success_url": "https://telegram.dog/",
+  "logo": "https://telegra.ph/file/bad1ab8ce5f44868e1a7e.jpg",
+  "success_url": "https://telegram.dog/Postdeleter_NsBot",
   "website": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
   "repository": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
   "env": {
@@ -17,6 +17,10 @@
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string.",
       "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "Give your bot username as @Postdeleter_NsBot",
+      "value": "@Postdeleter_NsBot"
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
