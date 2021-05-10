@@ -13,6 +13,7 @@ async def about(c, m):
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
 
+
 @Client.on_message(Filters.command("help") & Filters.private)
 async def help(c, m):
       bot = await c.get_me()
@@ -23,6 +24,7 @@ async def help(c, m):
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
 
+
 @Client.on_message(Filters.command("start") & Filters.private)
 async def start(c, m):
       bot = await c.get_me()
@@ -32,6 +34,8 @@ async def start(c, m):
                          reply_to_message_id=m.message_id,
                          reply_markup=reply_markup,
                          disable_web_page_preview=True)
+
+
 @Client.on_message(Filters.command("start@Postdeleter_NsBot") & Filters.group)
 async def start_group(c, m):
     bot = await c.get_me()
